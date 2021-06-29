@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path =  "api/v1/registration")
+@RequestMapping(path =  "api/v1/registration") // 이주소로 포스트 됨
 @AllArgsConstructor
 public class RegistrationController {
 
@@ -15,9 +15,9 @@ public class RegistrationController {
         return registrationService.register(request);
     }
 
-//    @GetMapping(path = "confirm")
-//    public String confirm(@RequestParam("token") String token) {
-//        return registrationService.confirmToken(token);
-//    }
+    @GetMapping(path = "confirm")
+    public String confirm(@RequestParam("token") String token) {
+        return registrationService.confirmToken(token);
+    }
 
 }

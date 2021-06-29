@@ -6,7 +6,7 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class RegistrationRequest {
+public class RegistrationRequest { // this format decide the JSON format given by server
     private final String firstName;
     private final String lastName;
     private final String email;
